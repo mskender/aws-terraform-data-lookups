@@ -36,13 +36,13 @@ output "public_subnets_map" {
 }
 
 output "private_subnets" {
-  description = "List of private subnets."
-  value       = var.lookup_private_subnets ? tolist(data.aws_subnet.private.*) :[]
+  description = "Set of private subnets."
+  value       = var.lookup_private_subnets ? data.aws_subnet.private.*:[]
 }
 
 output "public_subnets" {
-  description = "List of public subnet"
-  value       = var.lookup_public_subnets ? tolist(data.aws_subnet.public.*) :[]
+  description = "Set of public subnet"
+  value       = var.lookup_public_subnets ? data.aws_subnet.public.* :[]
 }
 
 output "subnets" {
