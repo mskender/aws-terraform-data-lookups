@@ -20,18 +20,18 @@ output "all_subnet_ids" {
 }
 
 output "private_subnets_map" {
-  description = "Map of private subnets. Can be referenced by the letter [a|b|c], i.e. private_subnets['a'].id"
+  description = "Map of private subnets. Can be referenced by the number and letter [1-number_of_subnets_per_az]][a|b|c], i.e. private_subnets['1a'].id"
   value = var.lookup_private_subnets ? {
     for sub in data.aws_subnet.private :
-    substr(sub.tags["Name"], -1, 1) => sub
+    substr(sub.tags["Name"], -2, 2) => sub
   } : {}
 }
 
 output "public_subnets_map" {
-  description = "Map of public subnets. Can be referenced by the letter [a|b|c], i.e. private_subnets['a'].id"
+  description = "Map of public subnets. Can be referenced by the number and letter [1-number_of_subnets_per_az]][a|b|c], i.e. private_subnets['1a'].id"
   value = var.lookup_public_subnets ? {
     for sub in data.aws_subnet.public :
-    substr(sub.tags["Name"], -1, 1) => sub
+    substr(sub.tags["Name"], -2, 2) => sub
   } :{}
 }
 
