@@ -22,3 +22,21 @@ variable "lookup_public_subnets" {
     default = true
 
 }
+
+variable "private_subnets_per_az" {
+    type=string
+    description="How many private subnets were created per VPC"
+    default=1
+}
+
+variable "public_subnets_per_az" {
+    type=string
+    description="How many public subnets were created per VPC"
+    default=1
+}
+
+variable "resource_name_limit" {
+    description = "How many of each resource names to generate for name-generation outputs."
+    default = 10
+    type = number
+}
