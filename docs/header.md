@@ -1,9 +1,8 @@
 # Data lookup module
 
-The purpose of this module is to provide simple and data lookup module.
-It's compatible with:
+The best practice is to keep your compute terraform project separate from your network one.
 
-- [aws-terraform-network module](https://github.com/mskender/aws-terraform-network)
+This module ensures ready-made data and name-generating outputs in your compute project if you provisioned your network with [aws-terraform-network module](https://github.com/mskender/aws-terraform-network)
 
 
 ## Example
