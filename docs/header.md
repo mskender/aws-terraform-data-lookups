@@ -2,7 +2,7 @@
 
 The best practice is to keep your compute terraform project separate from your network one.
 
-This module ensures ready-made data and name-generating outputs in your compute project if you provisioned your network with [aws-terraform-network module](https://github.com/mskender/aws-terraform-network)
+This module ensures ready-made data and name-generating outputs in your compute project if you provisioned your network with [aws-terraform-network](https://github.com/mskender/aws-terraform-network) module.
 
 
 ## Example
