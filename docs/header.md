@@ -3,7 +3,7 @@
 The purpose of this module is to provide simple and data lookup module.
 It's compatible with:
 
-- aws-terraform-network module
+- [aws-terraform-network module](https://github.com/mskender/aws-terraform-network)
 
 
 ## Example
